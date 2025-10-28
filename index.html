@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artifex - Digital Craft & Visual Strategy</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom colors based on our design: Deep Emerald and Rich Copper */
+        .bg-emerald-800-custom { background-color: #044F35; } 
+        .text-copper-custom { color: #B8860B; } /* Dark Goldenrod/Copper for accent */
+        .border-copper-custom { border-color: #B8860B; }
+        .bg-copper-custom-light { background-color: #D4A373; } /* Lighter copper for button/hover */
+        .bg-emerald-900-custom { background-color: #023624; }
+        .hover\:bg-copper-custom-light:hover { background-color: #D4A373; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-emerald-900-custom text-white min-h-screen antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-emerald-800-custom shadow-lg sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo/Brand -->
+            <div class="text-2xl font-extrabold tracking-widest text-copper-custom">
+                ARTIFEX
+            </div>
+            <!-- Mobile Menu Button (Hidden on Desktop) -->
+            <button id="menu-button" class="md:hidden p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-copper-custom transition duration-150 ease-in-out">
+                <svg class="w-6 h-6 text-copper-custom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#services" class="text-gray-300 hover:text-copper-custom transition duration-150">Services</a>
+                <a href="#portfolio" class="text-gray-300 hover:text-copper-custom transition duration-150">Portfolio</a>
+                <a href="#contact" class="text-gray-300 hover:text-copper-custom transition duration-150">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Drawer (Initially Hidden) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-emerald-900-custom z-20 transform -translate-y-full transition-transform duration-300 ease-in-out md:hidden">
+        <div class="p-6">
+            <button id="close-menu-button" class="absolute top-4 right-4 p-2 focus:outline-none focus:ring-2 focus:ring-copper-custom">
+                <svg class="w-6 h-6 text-copper-custom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <nav class="mt-12 flex flex-col space-y-6 text-center">
+                <a href="#services" class="text-2xl text-copper-custom hover:text-white transition duration-150">Services</a>
+                <a href="#portfolio" class="text-2xl text-copper-custom hover:text-white transition duration-150">Portfolio</a>
+                <a href="#contact" class="text-2xl text-copper-custom hover:text-white transition duration-150">Contact</a>
+            </nav>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <main>
+        <section id="hero" class="py-24 md:py-36 text-center">
+            <div class="max-w-4xl mx-auto px-4">
+                <!-- Large, attention-grabbing text -->
+                <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight mb-4 tracking-tighter">
+                    <span class="text-white block">Digital Craft.</span>
+                    <span class="text-copper-custom block">Mastered by Artifex.</span>
+                </h1>
+                <!-- Subtext for professionals -->
+                <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                    We sculpt meaningful visual strategies and seamless web experiences for discerning professionals.
+                </p>
+                <!-- Call to Action Button -->
+                <a href="#contact" class="inline-block py-3 px-8 text-lg font-semibold rounded-full shadow-2xl transition duration-300 ease-in-out
+                bg-copper-custom-light text-emerald-900-custom hover:bg-white transform hover:scale-105">
+                    Start Your Project
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-16 bg-emerald-800-custom">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12 text-copper-custom">Our Digital Offerings</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Service Card 1: Brand Identity -->
+                    <div class="bg-emerald-900-custom p-6 rounded-xl shadow-xl border-t-4 border-copper-custom transform hover:scale-[1.02] transition duration-300 ease-in-out">
+                        <div class="text-copper-custom mb-3">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white mb-2">Brand Identity</h3>
+                        <p class="text-gray-400">Crafting sophisticated logos, style guides, and comprehensive visual identities that resonate with your high-value audience.</p>
+                    </div>
+
+                    <!-- Service Card 2: Custom Web Design -->
+                    <div class="bg-emerald-900-custom p-6 rounded-xl shadow-xl border-t-4 border-copper-custom transform hover:scale-[1.02] transition duration-300 ease-in-out">
+                        <div class="text-copper-custom mb-3">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white mb-2">Custom Web Design</h3>
+                        <p class="text-gray-400">Building responsive, lightning-fast websites and user interfaces optimized for performance and conversion across all devices.</p>
+                    </div>
+
+                    <!-- Service Card 3: UX/UI Strategy -->
+                    <div class="bg-emerald-900-custom p-6 rounded-xl shadow-xl border-t-4 border-copper-custom transform hover:scale-[1.02] transition duration-300 ease-in-out">
+                        <div class="text-copper-custom mb-3">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L19.5 7.25M17.5 9.25L10 16.75M4 12c0-3.314 2.686-6 6-6s6 2.686 6 6-2.686 6-6 6-6-2.686-6-6z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white mb-2">UX/UI Strategy</h3>
+                        <p class="text-gray-400">Deep dive into user flow and interaction design to ensure your digital product is intuitive, enjoyable, and effective.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action / Contact Form Mockup -->
+        <section id="contact" class="py-20">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-10 text-copper-custom">Ready to Define Your Digital Future?</h2>
+                <div class="bg-emerald-800-custom p-8 rounded-xl shadow-2xl">
+                    <p class="text-gray-300 text-center mb-6">Contact us to begin crafting your visual masterpiece.</p>
+                    
+                    <form onsubmit="event.preventDefault(); showMessage();" class="space-y-4">
+                        <input type="text" placeholder="Your Name" required class="w-full p-3 rounded-lg bg-emerald-900-custom text-white border border-emerald-700 focus:border-copper-custom focus:ring-1 focus:ring-copper-custom transition duration-150">
+                        <input type="email" placeholder="Your Professional Email" required class="w-full p-3 rounded-lg bg-emerald-900-custom text-white border border-emerald-700 focus:border-copper-custom focus:ring-1 focus:ring-copper-custom transition duration-150">
+                        <textarea placeholder="Tell us about your project..." required rows="4" class="w-full p-3 rounded-lg bg-emerald-900-custom text-white border border-emerald-700 focus:border-copper-custom focus:ring-1 focus:ring-copper-custom transition duration-150"></textarea>
+                        
+                        <button type="submit" id="submit-button" class="w-full py-3 px-6 text-lg font-semibold rounded-lg transition duration-300 ease-in-out
+                        bg-copper-custom-light text-emerald-900-custom hover:bg-white transform hover:scale-[1.01] shadow-xl">
+                            Send Inquiry
+                        </button>
+                    </form>
+
+                    <!-- Message Box (Instead of alert()) -->
+                    <div id="message-box" class="mt-4 hidden p-4 rounded-lg bg-copper-custom-light text-emerald-900-custom font-medium text-center shadow-md" role="alert">
+                        <!-- Message content will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-800-custom py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <p>&copy; 2025 Artifex. All rights reserved. | Crafted with digital precision.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Form Message -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('menu-button');
+            const closeButton = document.getElementById('close-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+
+            // Toggle menu open
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.remove('-translate-y-full');
+            });
+
+            // Close menu
+            closeButton.addEventListener('click', () => {
+                mobileMenu.classList.add('-translate-y-full');
+            });
+            
+            // Close menu when a link is clicked
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('-translate-y-full');
+                });
+            });
+        });
+
+        // Function to show message box on form submission
+        function showMessage() {
+            const messageBox = document.getElementById('message-box');
+            messageBox.innerHTML = 'Thank you! Your inquiry has been sent to Artifex.';
+            messageBox.classList.remove('hidden');
+            
+            // Optionally hide the message after a few seconds
+            setTimeout(() => {
+                messageBox.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
+
+  
